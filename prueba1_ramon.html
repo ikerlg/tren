@@ -1,0 +1,128 @@
+<!-- AWP_In_Variable Name='"mis_datos".arriaga' -->
+<!-- AWP_In_Variable Name='"mis_datos".europa' -->
+<!-- AWP_In_Variable Name='"mis_datos".angulema' -->
+<!-- AWP_In_Variable Name='"mis_datos".velocidad_actual' -->
+<!-- AWP_In_Variable Name='"mis_datos".angulema' -->
+<!-- AWP_In_Variable Name='"mis_datos".llegada' -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="jquery/jquery.js"type="text/javascript"></script>
+    <script src="trenani.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="trenani.css" />
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+<div id="contenedor">
+<p id="tituloP">CUADRO DE MANDOS</p>
+<aside id="lateralI">
+    <div id="destinos" class="sel">
+        <ul >
+            <select name="posicion" id="posicion" >
+               
+                <option value="base">base</option>
+                <option value="medio">medio </option>
+                <option value="fin">fin</option>
+            </select>
+        </ul>
+
+    </div>
+
+        <div id="Velocidades" class="sel">
+            <ul >
+
+                <select name="velocidad" id="velocidad" >
+                   
+                    <option value="lento">lento</option>
+                    <option value="media">media </option>
+                    <option value="alta">alta</option>
+
+                </select>
+            </ul>
+
+        </div>
+   
+<div>
+<p>Llegada:</p>
+<input name="llegada" type=”text” id="llegada" value=””>
+</div>
+
+<div id="velocidad_actual">
+:="mis_datos".velocidad_actual:
+</div>
+
+</aside>
+
+    <form method="post" name="mandardatos" id = "frm">
+        <input id ="arriaga" name= '"mis_datos".arriaga' type= "hidden" value = "false">
+        <input id ="angulema" name= '"mis_datos".angulema' type= "hidden" value = "false">
+        <input id ="europa" name= '"mis_datos".europa' type= "hidden" value = "false">
+        <button id = "arranca" type="submit" onclick="funcion()">Arrancamos</button>
+    </form>
+<script>
+        function funcion() {
+            $("#frm").on("submit",function(e) {
+                // Enviamos el formulario usando AJAX
+
+                e.preventDefault();//para no recargar pagina
+                var frm = $(this).serialize(); //almacena todos los datos
+                    console.log(frm)
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://10.0.2.100/awp/pruebas/animatren.html',
+                    data: frm
+                })
+                return false;
+            });
+        }
+
+    </script>
+
+<section id="panel" class="paradas" style="position: relative;">
+        <div class="images" >
+            <div class="z-image" id="nubes" ><img src="imagenes/nubes.png"></div>
+            <div class="z-image" id="batalla" ><img src="imagenes/b2.png"></div>
+            <div class="z-image" id="fondo" ><img src="imagenes/fondo.png"></div>
+            <div class="z-image" id="ciudad" ><img src="imagenes/ciudad.png"></div>
+            <div class="z-image" id="parada" ><img src="imagenes/parada2.png"></div>
+            <div class="s-image" id="tranvia" ><img src="imagenes/tranvia.png"></div>
+        </div>
+    </section>
+</div>
+<script>
+
+$(document).ready(function(){
+$.ajaxSetup({cache:false});
+setInterval(function(){
+$.get("Server.htm",function(result){
+if(result["llegada"] == "1"){
+	if(result["arriaga"]== "1"){
+	document.getElementById("llegada").value ="HA LLEGADO A SU DESTINO, PARADA ARRIAGA";
+	}else if(result["europa"]== "1"){
+	document.getElementById("llegada").value ="HA LLEGADO A SU DESTINO, PARADA EUROPA";
+	}else if(result["angulema"]== "1"){
+	document.getElementById("llegada").value ="HA LLEGADO A SU DESTINO, PARADA ANGULEMA";
+	}
+}else{
+if(result["arriaga"]== "1"){
+	document.getElementById("llegada").value ="PROXIMA PARADA ARRIAGA";
+	}else if(result["europa"]== "1"){
+	document.getElementById("llegada").value ="PROXIMA PARADA EUROPA";
+	}else if(result["angulema"]== "1"){
+	document.getElementById("llegada").value ="PROXIMA PARADA ANGULEMA";
+	}
+}
+
+$('#velocidad_actual').text(result["velocidad_actual"]);
+});
+},500);
+});
+</script>
+</body>
+</html>
