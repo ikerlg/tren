@@ -1,0 +1,67 @@
+<!-- HTML index de la aplicacion 
+* Contiene la estructura de la web
+* @author Grupo de Iker, Ramon y David
+* @version 1.0 06/10/2017-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PAGINA PRINCIPAL</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=devide-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="shortcut icon" type="image/png" href="imagenes/train.png">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+<div id="contenido">
+    <header><a href="index.html"><img src="imagenes/eusk.jpg"></a></header>
+    <!-- menu -->
+    <div id="menu">
+        <button id="btn_menu"><img src="imagenes/menu.png"></button>
+    </div>
+    <nav>
+        <ul>
+            <li class="activo"><a href="#">INICIO</a></li>
+            <li><a href="paginas/control.html">CONTROL</a></li>
+            <li><a href="paginas/mantenimiento.html">MANTENIMIENTO</a></li>
+            <li><a href="paginas/historial.html">HISTORIAL</a></li>
+        </ul>
+    </nav><!-- FIN: menu -->
+    <aside>
+        <!-- panel lateral derecho -->
+        <div id="info">
+            <h3>INFORMACION</h3>
+            <h4>Oficina de Información del Tranvía</h4>
+            <h5>Vitoria-Gasteiz</h5>
+            <p>Sancho el Sabio, 9</p>
+            <h5>Horario:</h5>
+            <p>L-V (laborables): 8:00 a 19:30</p>
+            <h5>Horario de agosto:</h5>
+            <p>L-V (laborables): 8:00 a 14:00</p>
+            <h3>CONTACTO</h3>
+            <p>+34 944 333 333.</p>
+            <p>attcliente@euskotren.eus</p>
+            <p>https://twitter.com/euskotrenejgv</p>
+            <p>En nuestras oficinas de atención a la clientela ofrecemos servicio de objetos perdidos. Si has extraviado
+                alguno en nuestras instalaciones, puedes preguntarnos en el teléfono.</p>
+        </div><!-- FIN: panel lateral derecho -->
+    </aside>
+    <section>
+        <!-- seccion central principal -->
+        <iframe width="100%" height="90%" style="border:solid 3px #ccc" frameborder="0" scrolling="no" marginheight="0"
+                marginwidth="0"
+                src="http://maps.google.es/maps/ms?ie=UTF8&amp;hl=es&amp;t=m&amp;msa=0&amp;msid=201319501371444821422.0004a37a925e7f942e1cb&amp;ll=42.856777,-2.68178&amp;spn=0.037751,0.054846&amp;z=14&amp;output=embed"></iframe>
+        <br/>
+        <small>Ver <a
+                href="http://maps.google.es/maps/ms?ie=UTF8&amp;hl=es&amp;t=m&amp;msa=0&amp;msid=201319501371444821422.0004a37a925e7f942e1cb&amp;ll=42.856777,-2.68178&amp;spn=0.037751,0.054846&amp;z=14&amp;source=embed"
+                style="color:#0000FF;text-align:left">Tranvía Vitoria-Gasteiz</a> en un mapa más grande
+        </small><!-- FIN: seccion central principal -->
+    </section>
+    <footer></footer>
+</div>
+
+</body>
+</html>

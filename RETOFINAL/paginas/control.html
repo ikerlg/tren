@@ -1,0 +1,95 @@
+<!--HTML control de la aplicacion 
+* Contiene la estructura de la web
+* @author Grupo de Iker, Ramon y David
+* @version 1.0 06/10/2017-->
+
+<!-- Variables de control para el automata -->
+<!-- AWP_In_Variable Name='"mis_datos".arriaga' -->
+<!-- AWP_In_Variable Name='"mis_datos".parlamento' -->
+<!-- AWP_In_Variable Name='"mis_datos".angulema' -->
+<!-- AWP_In_Variable Name='"mis_datos".velocidad_actual' -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CONTROL</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/control.css">
+    <link rel="shortcut icon" type="image/png" href="../imagenes/train.png">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../js/control.js" type="text/javascript"></script>
+    <script src="../js/common.js" type="text/javascript"></script>
+    <script src='../js/keyframes/jquery.keyframes.min.js'></script>
+</head>
+<body>
+<div id="contenido">
+    <header><a href="../index.html"><img src="../imagenes/eusk.jpg"></a></header>
+    <!-- menu -->
+    <div id="menu">
+        <button id="btn_menu"><img src="../imagenes/menu.png"></button>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="../index.html">INICIO</a></li>
+            <li class="activo"><a href="control.html">CONTROL</a></li>
+            <li><a href="mantenimiento.html">MANTENIMIENTO</a></li>
+            <li><a href="historial.html">HISTORIAL</a></li>
+        </ul>
+    </nav><!-- FIN: menu -->
+    <aside>
+        <!-- contenedor lateral derecho -->
+        <div id="contenedor">
+            <h3 id="tituloP">CUADRO DE MANDOS</h3>
+            <div id="lateralI">
+                <div id="destinos" class="sel">
+                    <ul>
+                        <select name="posicion" id="posicion">
+                            <option value="base">Arriaga</option>
+                            <option value="medio">Parlamento</option>
+                            <option value="fin">Angulema</option>
+                        </select>
+                    </ul>
+                </div>
+                <div id="velocidades" class="sel">
+                    <ul>
+                        <select name="velocidad" id="velocidad">
+                            <option value="lento">Lenta</option>
+                            <option value="media">Media</option>
+                            <option value="alta">Alta</option>
+                        </select>
+                    </ul>
+                </div>
+                <form method="post" name="mandardatos" id="frm">
+                    <input id="arriaga" name='"mis_datos".arriaga' type="hidden" value="false">
+                    <input id="angulema" name='"mis_datos".angulema' type="hidden" value="false">
+                    <input id="europa" name='"mis_datos".parlamento' type="hidden" value="false">
+                    <button id="arranca" type="submit" value="toggle()">Arrancamos</button>
+                </form>
+            </div>
+        </div><!-- FIN: contenedor lateral derecho -->
+    </aside>
+    <section>
+        <!-- panel central principal -->
+        <div id="panel" class="paradas" style="position: relative;">
+            <div class="images">
+                <div id="on"><img src="../imagenes/ciclo.png"/></div>
+                <img style="display:none;" id="on2" img src="../imagenes/ciclo.png"></img>
+                <div class="z-image" id="nubes"><img src="../imagenes/nubes.png"></div>
+                <div class="z-image" id="batalla"><img src="../imagenes/b2.png"></div>
+                <div class="z-image" id="fondo"><img src="../imagenes/fondo.png"></div>
+                <div class="z-image" id="ciudad"><img src="../imagenes/ciudad.png"></div>
+                <div class="z-image" id="parada"><img src="../imagenes/parada2.png"></div>
+                <div class="s-image" id="tranvia"><img src="../imagenes/tranvia.png"></div>
+                <div class="s-image" id="hierba"><img src="../imagenes/hierba.png"></div>
+                <div class="s-image" id="barra" ><img src="../imagenes/velocida.PNG"></div>
+                <div class="s-image" id="roja" ><img src="../imagenes/roja2.png"></div>
+            </div>
+        </div>&nbsp; <!-- FIN: panel central principal -->
+        <h1 class="info" id="velo" value="">VELOCIDAD :="mis_datos".velocidad_actual: km/h</h1>
+    </section>
+    <footer></footer>
+</div>
+</body>
+</html>

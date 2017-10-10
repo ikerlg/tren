@@ -1,0 +1,488 @@
+/**
+*CSS de la pagina control de la aplicacion 
+*Contiene lo necesario para dar apariencia y un responsive desing
+*
+* @author Grupo de Iker, Ramon y David
+* @version 1.0 06/10/2017
+*
+*/
+
+/*CONFIGURACION GENERAL*/
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+    box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
+}
+
+#contenido {
+    width: 90%;
+    height: 100%;
+    margin: 50px auto;
+}
+
+/*-- FIN --*/
+
+/*CONFIGURACION DEL HEADER*/
+header {
+
+    background-repeat: no-repeat;
+    height: 100px;
+    font-size: 3em;
+    text-align: center;
+    padding-bottom: 10px;
+
+}
+
+header img {
+
+    max-width: 100%;
+    height: auto;
+
+}
+
+/*-- FIN --*/
+
+/*CONFIGURACION DEL NAV*/
+nav {
+    background-color: #5AB3DF;
+    height: 25px !important;
+}
+
+ul {
+
+    margin: 0px;
+    position: relative;
+    padding: 0px 0px 0px 0px;
+}
+
+ul li {
+
+    list-style: none;
+    float: left;
+    width: 25%;
+    height: 25px;
+    text-align: center;
+
+}
+
+ul li a {
+    text-decoration: none !important;
+}
+
+ul li:hover {
+    text-decoration: none;
+    background-color: #0059FF;
+
+}
+
+a {
+
+    color: white;
+}
+
+.activo {
+    background-color: #0059FF;
+}
+
+#menu {
+
+    background-color: #5AB3DF;
+
+}
+
+#btn_menu {
+    display: none;
+}
+
+/*-- FIN --*/
+
+/*CONFIGURACION DEL ASIDE*/
+aside {
+
+    position: relative;
+    width: 25%;
+    height: 650px;
+    float: left;
+    background-color: #E2E5EE;
+    color: black;
+    text-align: center;
+
+}
+
+#destinos {
+    position: absolute;
+    width: 50%;
+    top: 25%;
+    left: 25%;
+
+}
+
+#velocidades {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 25%;
+
+}
+
+#arranca {
+    position: absolute;
+    width: 50%;
+    float: left;
+    top: 75%;
+    left: 25%;
+    height: 35px;
+
+    border: 1px solid #DBE1EB;
+    font-size: 18px;
+    font-family: Arial, Verdana;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    background: #4972B5;
+    background: linear-gradient(left, #4972B5, #618ACB);
+    background: -moz-linear-gradient(left, #4972B5, #618ACB);
+    background: -webkit-linear-gradient(left, #4972B5, #618ACB);
+    background: -o-linear-gradient(left, #4972B5, #618ACB);
+    color: #FFFFFF;
+}
+
+#arranca:hover {
+
+    background: #365D9D;
+    background: linear-gradient(left, #365D9D, #436CAD);
+    background: -moz-linear-gradient(left, #365D9D, #436CAD);
+    background: -webkit-linear-gradient(left, #365D9D, #436CAD);
+    background: -o-linear-gradient(left, #365D9D, #436CAD);
+    color: #FFFFFF;
+    border-color: #FBFFAD;
+}
+
+#tituloP {
+
+    position: absolute;
+    width: 50%;
+    float: left;
+    top: 5%;
+    left: 25%;
+
+}
+
+select {
+
+    width: 100%;
+    height: 35px;
+    background-color: #989793;
+    font-size: 1.20em;
+    color: white;
+
+}
+
+/*-- FIN --*/
+
+/*CONFIGURACION DEL SECTION*/
+section {
+
+    width: 75%;
+    height: 650px;
+    float: left;
+    position: relative;
+    background-color: #ACAAAD;
+
+}
+
+#panel {
+    float: left;
+    overflow: hidden;
+    width: 1000px;
+    height: 385px;
+
+}
+
+/**superponer imagenes*/
+/**elemento en css*/
+#on {
+    width: 74px;
+    height: 67px;
+    z-index: 2;
+    left: 40px;
+    top: 35px;
+    position: absolute;
+}
+
+#on2 {
+    width: 80px;
+    height: 77px;
+    z-index: 2;
+    left: 40px;
+    top: 35px;
+    position: absolute;
+}
+
+/*anima en jquery*/
+#fondo {
+    width: 1972px;
+    height: 395px;
+    z-index: 0;
+    left: 0px;
+    top: 0px;
+    position: absolute
+}
+
+#ciudad {
+    width: 1972px;
+    height: 395px;
+    z-index: 2;
+    left: 0px;
+    top: 0px;
+    position: absolute
+}
+
+#parada {
+    width: 72px;
+    height: 45px;
+    z-index: 4;
+    left: 950px;
+    top: 316px;
+    position: absolute
+}
+
+#batalla {
+    width: 300px;
+    height: 400px;
+    z-index: 3;
+    left: 1000px;
+    top: 98px;
+    position: absolute
+}
+
+#tranvia {
+    width: 590px;
+    height: 67px;
+    z-index: 5;
+    left: -200px;
+    top: 330px;
+    position: absolute
+}
+
+#hierba {
+    width: 1972px;
+    height: 67px;
+    z-index: 5;
+    left: 0px;
+    top: 375px;
+    position: absolute
+}
+
+#nubes {
+    width: 2400px;
+    height: 395px;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+    position: absolute
+}
+
+#barra {
+    width: 20px;
+    height: 670px;
+    z-index: 5;
+    right: 29px;
+    top: 0px;
+    position: absolute
+}
+
+#roja {
+    width: 30px;
+    height: 670px;
+    z-index: 6;
+    right: -21px;
+    top: 360px;
+    position: absolute;
+}
+
+#panel {
+
+    width: 100%;
+    height: 387px;
+    margin-top: 60px;
+
+}
+
+.info {
+    text-align: center;
+    color: white;
+
+}
+
+#para {
+    position: relative;
+    top: 25px;
+
+}
+
+.tair {
+
+    -webkit-animation-duration: 0.3s;
+/ animation-duration: 0.3 s;
+    width: 70px;
+    animation: rotate 1s linear;
+    animation-fill-mode: backwards;
+    animation-direction: normal;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+#roja {
+    -webkit-animation-duration: 2s;
+/ animation-duration: 1 s;
+    width: 70px;
+    animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+
+}
+
+@keyframes run {
+    100% {
+        transform: translateY(-300px);
+    }
+}
+
+/*-- FIN --*/
+
+/*CONFIGURACION DEL FOOTER*/
+footer {
+    height: 80px;
+    background-image: url("../imagenes/pie.gif");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    clear: both;
+    position: relative;
+}
+
+/*-- FIN --*/
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*CONFIGURACION DEL RESPONSIVE WEB DESIGN MEDIANTE - MEDIA QUERIES*/
+
+@media screen and (max-width: 1900px) {
+
+    aside {
+        position: relative;
+        width: 100%;
+        height: 120px;
+        top: 0px;
+
+    }
+
+    section {
+
+        width: 100%;
+
+    }
+
+    #destinos {
+        position: absolute;
+        width: 25%;
+        top: 25%;
+        left: 15%;
+
+    }
+
+    #velocidades {
+        position: absolute;
+        width: 25%;
+        top: 25%;
+        left: 55%;
+
+    }
+
+    #arranca {
+        position: absolute;
+        width: 25%;
+        top: 60%;
+        left: 35%;
+
+    }
+
+    #tituloP {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 1065px) {
+
+    nav {
+        height: 40px;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    #contenido {
+        width: 100%;
+        margin: 0px auto;
+
+    }
+
+    #btn_menu {
+
+        display: block;
+
+    }
+
+    nav {
+
+        height: 80px;
+        display: none;
+
+    }
+
+    ul li {
+        clear: left;
+        width: 100%;
+        text-align: left;
+        background-color: #5AB3DF;
+    }
+
+}
+
+@media screen and (min-width: 799px) {
+
+    #btn_menu {
+
+        display: none;
+
+    }
+
+    nav {
+
+        display: block !important;
+        height: 25px;
+        font-size: 1.3em;
+
+    }
+
+    ul li {
+        float: left;
+        width: 25%;
+        text-align: center;
+    }
+
+}
+
+/*---------------------- FIN ----------------------*/
